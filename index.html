@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Заметки</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Заметки</h1>
+
+    <div class="workspace">
+
+        <div class="column left-column">
+            
+            <div class="input-group">
+                <input type="text" id="taskInput" placeholder="Введите текст...">
+                <button id="addBtn">+</button>
+            </div>
+
+            <div id="stickersField" class="drop-zone"></div>
+            <button class="clear-btn" data-target="stickersField">Очистить</button>
+        </div>
+        <div class="column right-column">
+            <div class="board-wrapper">
+                <div id="boardField" class="drop-zone board"></div>
+            </div>
+            <button class="clear-btn" data-target="boardField">Очистить</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

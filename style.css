@@ -1,0 +1,176 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #fff;
+    color: #000;
+}
+
+h1 {
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.workspace {
+    display: flex;
+    gap: 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.left-column {
+    width: 200px; 
+    flex-shrink: 0;
+    position: relative; 
+}
+
+.right-column {
+    flex: 1; 
+    min-width: 400px;
+}
+
+.board-wrapper {
+    padding-top: 48px; 
+}
+
+.input-group {
+    position: relative;
+    height: 38px;
+    margin-bottom: 10px; 
+}
+
+.input-group input {
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    font-size: 13px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.input-group input:focus {
+    border-color: #E1F6C9;
+}
+
+.input-group button {
+    position: absolute;
+    top: 0;
+    left: 220px; 
+    width: 38px;
+    height: 38px;
+    background: #E1F6C9; 
+    color: #2E7D32;      
+    border: 1px solid #C4DFAC; 
+    border-radius: 0;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.input-group button:hover {
+    background: #D1EFB2; 
+    border-color: #B3D494;
+}
+
+.drop-zone {
+    position: relative;
+    height: 500px;
+    background: #fff;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.board {
+    background-image: url('board.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+.drop-zone.drag-over {
+    background-color: #f0f0f0;
+}
+
+.sticker {
+    position: absolute;
+    width: 110px;
+    min-height: 110px;
+    padding: 10px 8px 25px;
+    border: 1px solid rgba(0,0,0,0.1); 
+    border-radius: 0;
+    cursor: grab;
+    font-size: 13px;
+    line-height: 1.3;
+    word-wrap: break-word;
+    user-select: none;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+.sticker:active {
+    cursor: grabbing;
+}
+
+.sticker.dragging {
+    opacity: 0.5;
+}
+
+.sticker-text {
+    display: block;
+}
+
+.sticker-delete {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    width: 18px;
+    height: 18px;
+    border: none;
+    border-radius: 0;
+    background: rgba(255, 255, 255, 0.5);
+    color: #000;
+    font-size: 12px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0;
+}
+
+.sticker-delete:hover {
+    background: #ff0000;
+    color: #fff;
+}
+
+.clear-btn {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    background: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    cursor: pointer;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.clear-btn:hover {
+    background: #eee;
+}
